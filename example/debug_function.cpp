@@ -10,6 +10,10 @@
 #include <iostream>     // std::cerr
 #include <cstdlib>      // std::exit
 
+#ifdef _MSC_VER
+#pragma warning(disable: 4702) // unreachable code
+#endif
+
 void print_signal_handler_and_exit() {
     typedef void(*function_t)(int);
 
